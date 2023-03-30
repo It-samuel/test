@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css"/>
+   
+    <title>summit</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <form>
+                <h3>Please Eenter your information</h3><br>
+                
+                <h4>First Name</h4>
+                <input type="text" name="firstName" id="firstName" placeholder="enter your first name" required><br>
+                <h4>Surname</h4>
+                <input type="text" name="surname"  id="surname" placeholder="enter your surname name"><br>
+
+                <input type="radio" id="rad" name="sex" value="male"  >Male
+                <input type="radio" id="rad1" name="sex" value="female" >Female<br>
+
+            </form>
+            <button class="btn" type="submit" onclick="submit()">Submit</button>
+            <div class="poppup" id="popup">
+                <h1>Saved<br> Successfully!!!</h1>
+                <button type="reset" class="btn1" onclick="done()">OK</button>
+            </div>
+        </div>
+        
+    </div>
+<script>
+    let form = document.querySelector("form");
+
+    let poppup = document.getElementById("popup");
+
+    function submit(){
+        poppup.classList.add("open_popup");
+    }
+    function done(){
+        poppup.classList.remove("open_popup");
+
+    }
+</script>    
+</body>
+</html>
